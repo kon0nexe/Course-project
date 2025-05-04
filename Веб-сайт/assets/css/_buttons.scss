@@ -1,0 +1,145 @@
+.btn {
+  display: inline-block;
+  padding: 15px 30px;
+  background: #11a9d9;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 50px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: pulse 2s infinite ease-in-out;
+
+  &:hover {
+    transform: translateY(-5px) scale(1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    animation-play-state: paused;
+  }
+}
+
+.left-30 {
+  padding-left: 30px;
+}
+
+.players-menu-buttons > a {
+  color: #11a9d9;
+  display: inline-block;
+  height: 29px;
+  line-height: 29px;
+  text-decoration: none;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 3px;
+  font-size: 16px;
+  margin-right: 11px;
+  width: 160px;
+  text-align: center;
+
+  &.gk{
+    position: relative;
+    &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 29px;
+        top: 14px;
+        transform: translateY(-50%);
+        background-position: -3px -179px;
+        width: 14px;
+        height: 16px;
+    }
+    &:hover{
+      color: #fff;
+      background: #11a9d9;
+      &::before {
+        background-position: -3px -198px;
+      }
+    }
+    &.active{
+      color: #fff;
+      background: #11a9d9;
+      &::before {
+        background-position: -3px -198px;
+      }
+    }
+  }
+
+  &.def{
+    position: relative;
+    &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 20px;
+        top: 13px;
+        transform: translateY(-50%);
+        background-position: -23px -180px;
+        width: 13px;
+        height: 16px;
+    }
+    &:hover{
+      color: #fff;
+      background: #11a9d9;
+      &::before {
+        background-position: -23px -199px; 
+      }
+    }
+    &.active{
+      color: #fff;
+      background: #11a9d9;
+      &::before {
+        background-position: -23px -199px; 
+      }
+    }
+  }
+
+  &.at{
+    position: relative;
+    &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 11px;
+        top: 13px;    
+        transform: translateY(-50%);
+        background-position: -43px -179px;
+        width: 15px;
+        height: 16px;
+    }
+    &:hover{
+      color: #fff;
+      background: #11a9d9;
+      &::before {
+        background-position: -43px -197px; 
+      }
+    }
+    &.active{
+      color: #fff;
+      background: hsl(194, 85%, 46%);
+      &::before {
+        background-position: -43px -197px; 
+      }
+    }
+  }
+  &.all{
+    position: relative;
+    &:hover{
+      color: #fff;
+      background: #11a9d9;
+    }
+    &.active{
+      color: #fff;
+      background: #11a9d9;
+    }
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

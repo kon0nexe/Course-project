@@ -1,0 +1,330 @@
+.schedule {
+
+    $blue: #11a9d9;
+    $hoverblue: #00c2ff;
+    $black: #121212;
+    $white: #fff;
+    $hoverwhite: #e8e3e3;
+
+    padding: 60px 0;
+    background: $black;
+  
+    .section-title {
+      text-align: center;
+      margin-bottom: 40px;
+      color: $white;
+      font-size: 2.5rem;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+  
+    .schedule-controls {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      margin-bottom: 30px;
+  
+      .month-prev,
+      .month-next {
+        background: $blue;
+        border: none;
+        border-radius: 8px;
+        padding: 10px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+  
+        svg {
+          width: 24px;
+          height: 24px;
+          stroke: $white;
+        }
+  
+        &:hover {
+          background: $blue;
+        }
+  
+        &:disabled {
+          background: #a0a8b6;
+          cursor: not-allowed;
+        }
+      }
+  
+      .month-title {
+        font-size: 1.5rem;
+        color: $white;
+        font-weight: 700;
+      }
+    }
+  
+    .desktop-view {
+      display: block;
+      @media (max-width: 768px) {
+        display: none;
+      }
+    }
+  
+    .mobile-view {
+      display: none;
+      @media (max-width: 768px) {
+        display: block;
+      }
+    }
+  
+    .schedule-table {
+      max-width: 1200px;
+      margin: 0 auto;
+      background: $white;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+  
+      .schedule-header {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        background: $blue;
+        color: $white;
+        font-weight: 700;
+        text-align: center;
+        padding: 15px 0;
+  
+        span {
+          font-size: 1.1rem;
+        }
+      }
+  
+      .schedule-body {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        grid-template-rows: repeat(5, 120px);
+        gap: 1px;
+        background: #e0e4e8;
+  
+        .day {
+          background: $white;
+          padding: 10px;
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+          position: relative;
+          transition: transform 0.2s ease;
+  
+          &:hover {
+            background: $hoverwhite;
+          }
+  
+          &.empty {
+            background: #f5f7fa;
+          }
+  
+          .day-number {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #1a2a44;
+          }
+  
+          .match {
+            padding: 5px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            color: $white;
+            text-align: center;
+  
+            &.home {
+              background: #1976d2;
+            }
+  
+            &.away {
+              background: #7b1fa2;
+            }
+  
+            &.event {
+              background: #f57c00;
+            }
+          }
+        }
+      }
+    }
+  
+    .schedule-list {
+      max-width: 1200px;
+      margin: 0 auto;
+      background: $white;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+  
+      .list-header {
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        padding: 10px;
+        background: $blue;
+        color: $white;
+        font-weight: 700;
+        border-radius: 8px;
+        margin-bottom: 10px;
+  
+        span {
+          text-align: center;
+          font-size: 1rem;
+        }
+      }
+  
+      .list-item {
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        padding: 10px;
+        border-bottom: 1px solid #e0e4e8;
+        align-items: center;
+  
+        &:last-child {
+          border-bottom: none;
+        }
+  
+        .date {
+          font-size: 0.9rem;
+          color: #1a2a44;
+          text-align: center;
+        }
+  
+        .opponent {
+          font-size: 0.9rem;
+          color: #1a2a44;
+          text-align: center;
+        }
+  
+        .score {
+          display: inline-block;
+          padding: 5px 10px;
+          border-radius: 4px;
+          color: $white;
+          font-size: 0.8rem;
+          text-align: center;
+  
+          &.win {
+            background: #2e7d32;
+          }
+  
+          &.loss {
+            background: #d32f2f;
+          }
+  
+          &.pending {
+            background: #a0a8b6;
+          }
+        }
+      }
+    }
+  
+    .schedule-legend {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 20px;
+  
+      .legend-item {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 0.8rem;
+        color: $white;
+  
+        .legend-dot {
+          width: 12px;
+          height: 12px;
+          border-radius: 50%;
+  
+          &.home {
+            background: #1976d2;
+          }
+  
+          &.away {
+            background: #7b1fa2;
+          }
+  
+          &.event {
+            background: #f57c00;
+          }
+        }
+      }
+    }
+  }
+  
+  @media (max-width: 1119px) {
+    .schedule {
+      padding: 40px 0;
+  
+      .section-title {
+        font-size: 2rem;
+      }
+  
+      .schedule-controls {
+        .month-title {
+          font-size: 1.2rem;
+        }
+  
+        .month-prev,
+        .month-next {
+          padding: 8px;
+  
+          svg {
+            width: 20px;
+            height: 20px;
+          }
+        }
+      }
+  
+      .schedule-list {
+        padding: 15px;
+  
+        .list-header {
+          span {
+            font-size: 0.9rem;
+          }
+        }
+  
+        .list-item {
+          .date,
+          .opponent {
+            font-size: 0.85rem;
+          }
+  
+          .score {
+            font-size: 0.75rem;
+            padding: 4px 8px;
+          }
+        }
+      }
+  
+      .schedule-legend {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+  
+        .legend-item {
+          font-size: 0.9rem;
+        }
+      }
+    }
+  }
+  
+  @media (max-width: 1119px) {
+    .schedule-list {
+      .list-header {
+        span {
+          font-size: 0.8rem;
+        }
+      }
+  
+      .list-item {
+        .date,
+        .opponent {
+          font-size: 0.8rem;
+        }
+  
+        .score {
+          font-size: 0.7rem;
+        }
+      }
+    }
+  }

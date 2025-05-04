@@ -1,0 +1,220 @@
+@media (max-width: 1119px) {
+  .players {
+    .swiper-container {
+      padding: 0 20px;
+
+      .swiper-slide {
+        max-width: 100%;
+      }
+
+      .player-card {
+        max-width: 100%;
+
+        .player-details {
+          padding: 20px;
+
+          h3 {
+            margin-bottom: 10px;
+            font-size: 0.8rem;
+          }
+
+          span {
+            color: #fff;
+            font-size: 0.7rem;
+          }
+        }
+      }
+
+      .swiper-button-next,
+      .swiper-button-prev {
+        display: none;
+      }
+
+      .swiper-pagination {
+        bottom: 5px;
+      }
+    }
+  }
+
+  .header {
+    .nav {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background: #15161a;
+      padding: 20px;
+
+      &.active {
+        display: block;
+      }
+
+      ul {
+        flex-direction: column;
+      }
+
+      li {
+        margin: 10px 0;
+      }
+
+      .dropdown {
+        .dropdown-menu {
+          display: none;
+          position: static;
+          background: rgba(255, 255, 255, 0.1);
+          box-shadow: none;
+          padding: 10px 20px;
+          transform: none;
+          opacity: 1;
+
+          li {
+            padding: 5px 0;
+          }
+        }
+
+        &.active .dropdown-menu {
+          display: block;
+        }
+
+        .dropdown-toggle::after {
+          content: '▼';
+          margin-left: 5px;
+          font-size: 12px;
+          transition: transform 0.3s;
+        }
+
+        &.active .dropdown-toggle::after {
+          transform: rotate(180deg);
+        }
+      }
+    }
+
+    .menu-toggle {
+      display: block;
+      background: none;
+      border: none;
+      color: #11a9d9;
+      cursor: pointer;
+      padding: 10px;
+
+      svg {
+        width: 24px;
+        height: 24px;
+        stroke: #11a9d9;
+      }
+
+      &:focus {
+        outline: 2px solid #11a9d9;
+        outline-offset: 2px;
+      }
+    }
+
+    .logo {
+      img {
+        height: 40px; 
+      }
+
+      i {
+        height: 30px;
+        margin: 0 10px; 
+      }
+
+      span {
+        font-size: 24px;
+
+        & + span {
+          font-size: 12px; 
+        }
+      }
+    }
+  }
+
+  .hero {
+    h1 {
+      font-size: 2.5rem;
+    }
+  }
+
+  .about-content {
+    grid-template-columns: 1fr;
+  }
+
+  .partners {
+    .partners-row {
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 15px;
+    }
+
+    .partner-logo {
+      width: 120px;
+      height: 80px;
+
+      img {
+        transform: rotate(0);
+      }
+    }
+  }
+
+  .back-to-top {
+    width: 40px;
+    height: 40px;
+
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+  .players-menu-buttons > a {
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .partners {
+    .partners-row {
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+      gap: 10px;
+    }
+
+    .partner-logo {
+      width: 100px;
+      height: 60px;
+    }
+  }
+
+  .back-to-top {
+    bottom: 15px;
+    right: 15px;
+    width: 36px;
+    height: 36px;
+
+    svg {
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+  .header {
+    .logo {
+      img {
+        height: 32px;
+      }
+
+      i {
+        display: none;
+      }
+
+      span {
+        font-size: 20px;
+
+        & + span {
+          font-size: 10px;
+        }
+      }
+    }
+  }
+  .players-menu-buttons > a {
+    margin-top: 20px;
+  }
+}

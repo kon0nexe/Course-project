@@ -1,0 +1,229 @@
+.b_spr_in::before {
+    background-image: url(/assets/images/sprite_in.png);
+    background-repeat: no-repeat;
+}
+
+.s_title {
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px;
+    text-transform: uppercase;
+    display: block;
+    font-weight: bold;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    position: relative;
+
+    &::before {
+        content: '';
+        display: block;
+        height: 50px; 
+    }
+}
+
+.gk_personal {
+    padding-bottom: 60px;
+
+    .team_type {
+        padding-left: 41px;
+        position: absolute;
+        color: #11a9d9;
+        top: 0;
+        left: 15px;
+
+        &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            background-position: -123px -179px;
+            width: 23px;
+            height: 30px;
+        }
+    }
+
+    .player-image {
+        outline: 5px solid #11a9d9;
+    }
+
+    .player-number {
+        background: #11a9d9;
+    }
+
+    .player-name,
+    .player-info {
+        color: #fff;
+    }
+}
+
+.def_personal {
+    padding-bottom: 60px;
+
+    .team_type {
+        padding-left: 41px;
+        position: absolute;
+        color: #15b76d;
+        top: 0;
+        left: 15px;
+
+        &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            background-position: -150px -177px;
+            width: 26px;
+            height: 31px;
+        }
+    }
+
+    .player-image {
+        outline: 5px solid #15b76d;
+    }
+
+    .player-number {
+        background: #15b76d;
+    }
+
+    .player-name,
+    .player-info {
+        color: #fff;
+    }
+}
+
+.at_personal {
+    padding-bottom: 60px;
+
+    .team_type {
+        padding-left: 41px;
+        position: absolute;
+        color: #fd624d;
+        top: 0;
+        left: 15px;
+
+        &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            background-position: -179px -179px;
+            width: 28px;
+            height: 29px;
+        }
+    }
+
+    .player-image {
+        outline: 5px solid #fd624d;
+    }
+
+    .player-number {
+        background: #fd624d;
+    }
+
+    .player-name,
+    .player-info {
+        color: #fff;
+    }
+}
+
+.gk_personal-grid,
+.def_personal-grid,
+.at_personal-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    justify-items: center;
+    margin-top: 20px;
+}
+
+.player-card {
+    text-align: center;
+    max-width: 250px;
+}
+
+.player-image-wrapper {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+}
+
+.player-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+}
+
+.player-number {
+    position: absolute;
+    bottom: -14px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    outline: 5px solid #121212;
+    border-radius: 50%;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.player-name {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 16px 0 0;
+}
+
+.player-info {
+    font-size: 14px;
+    margin: 0;
+}
+
+@media (max-width: 992px) {
+    .gk_personal-grid,
+    .def_personal-grid,
+    .at_personal-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .gk_personal-grid,
+    .def_personal-grid,
+    .at_personal-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .gk_personal-grid,
+    .def_personal-grid,
+    .at_personal-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .player-image-wrapper {
+        width: 120px;
+        height: 120px;
+    }
+
+    .player-number {
+        width: 35px;
+        height: 35px;
+        line-height: 35px;
+        font-size: 14px;
+    }
+}
