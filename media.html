@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Хоккейный клуб Динамо-Минск</title>
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic&amp;subset=latin,cyrillic-ext,cyrillic" type="text/css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700,700italic&amp;subset=latin,cyrillic-ext,cyrillic" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+
+    <div class="preloader">
+        <div class="blobs">
+            <div class="blob-center"></div>
+            <div class="blob"></div>
+            <div class="blob"></div>
+            <div class="blob"></div>
+            <div class="blob"></div>
+            <div class="blob"></div>
+            <div class="blob"></div>
+        </div>
+    </div>
+
+    <header class="header">
+        <div class="container">
+          <a href="/" class="logo">
+            <img src="assets/images/logo-main.png" alt="Динамо Минск" loading="lazy">
+            <i></i>
+            <div class="tittle-text">
+                <span>ХК Динамо</span>
+                <span>Минск</span>
+            </div>
+          </a>
+          <nav class="nav" aria-label="Главное меню">
+            <ul>
+              <li><a href="/">Главная</a></li>
+              <li><a href="team.html">Команда</a></li>
+              <li><a href="schedule.html">Расписание матчей</a></li>
+              <li><a href="history.html">История клуба</a></li>
+              <li><a class="active" href="media.html">Медиа</a></li>
+              <li><a href="contact.html">Контакты</a></li>
+            </ul>
+          </nav>
+          <button class="menu-toggle" aria-label="Toggle menu">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path d="M3 12h18M3 6h18M3 18h18" stroke-width="2"/>
+            </svg>
+          </button>
+        </div>
+    </header>
+
+    <section id="media" class="media">
+      <div class="container">
+          <h2 class="section-title">Последние новости</h2>
+          <div class="news-grid" id="news-grid"></div>
+          <div class="pagination">
+              <button class="pagination-btn prev" aria-label="Предыдущая страница" disabled>
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                      <path d="M15 18l-6-6 6-6"/>
+                  </svg>
+              </button>
+              <div class="pagination-pages" id="pagination-pages"></div>
+              <button class="pagination-btn next" aria-label="Следующая страница">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                      <path d="M9 18l6-6-6-6"/>
+                  </svg>
+              </button>
+          </div>
+      </div>
+  </section>
+
+
+    <section id="partners" class="partners">
+        <div class="container">
+            <h2 class="section-title">Партнеры</h2>
+            <div class="partners-grid" id="partners-grid">
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2025 Хоккейный клуб Динамо Минск. Все права защищены.</p>
+            <p>Дизайн сайта разработал Конон Даниил Дмитриевич.</p>
+        </div>
+    </footer>
+
+    <button class="back-to-top" aria-label="Back to Top">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 19V5M5 12l7-7 7 7"/>
+        </svg>
+    </button>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="assets/js/modern.js"></script>
+    <script src="assets/js/media.js"></script>
+    <script src="assets/js/partners.js"></script>
+</body>
+</html>
